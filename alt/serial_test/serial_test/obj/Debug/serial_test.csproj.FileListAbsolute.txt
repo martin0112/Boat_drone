@@ -1,0 +1,7 @@
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\bin\Debug\serial_test.exe.config
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\bin\Debug\serial_test.exe
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\bin\Debug\serial_test.pdb
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\obj\Debug\serial_test.csprojAssemblyReference.cache
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\obj\Debug\serial_test.csproj.CoreCompileInputs.cache
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\obj\Debug\serial_test.exe
+C:\Users\iT-Taste\Desktop\Boot\alt\serial_test\serial_test\obj\Debug\serial_test.pdb

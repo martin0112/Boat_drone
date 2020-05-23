@@ -1,0 +1,89 @@
+﻿<Window x:Class="remote_II.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gmaps="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Boat Remote" Height="450" Width="800">
+        
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.45*" />
+            <ColumnDefinition Width="0.15*" />
+            <ColumnDefinition Width="0.1*" />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+
+        </Grid.RowDefinitions>
+        <ComboBox Name="Kamera_Liste" Grid.ColumnSpan="3" Grid.Column="0" ></ComboBox>
+        <ComboBox Name="Port_Liste" Grid.ColumnSpan="3" Grid.Column="0" Grid.Row="2" Grid.RowSpan="1" ></ComboBox>
+        <gmaps:GMapControl x:Name="mapView" BorderThickness="6" BorderBrush="Black" Loaded="mapView_Loaded" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4" Grid.Row="5"/>
+
+        <Button BorderBrush="Black" BorderThickness="6" Background="Gray"  Grid.Row="1"   Grid.Column="0" Grid.ColumnSpan="3" Click="Button_Click">Connect Camera</Button>
+        <Button BorderBrush="Black" BorderThickness="2" Background="Olive" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="1" Click="Button_Click_2">Zoom In</Button>
+        <Button BorderBrush="Black" BorderThickness="2" Background="Blue" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="1" Click="Button_Click_3">Center</Button>
+        <Button BorderBrush="Black" BorderThickness="2" Background="Yellow" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="1" Click="Button_Click_4">Zoom out</Button>
+        <Button Name="Connect_button" BorderBrush="Black" BorderThickness="6" Background="LightBlue" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Click="Button_Click_5">Connect Port</Button>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="5" Grid.RowSpan="5">
+            <TextBlock Name="Telemetry_text" Background="LightCyan" FontSize="14"></TextBlock>
+        </Border>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="4" Grid.RowSpan="5">
+            <TextBlock Background="White" FontSize="14" xml:space="preserve">Last Update:
+LAT
+LNG
+Velociy
+Heading                
+Status 
+Status     
+            </TextBlock>
+        </Border>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="0" Grid.Row="4" Grid.RowSpan="1      " Grid.ColumnSpan="1">
+
+            <TextBlock Name="Orders" Text="Mode
+                       Waypoint
+                       "  TextWrapping="WrapWithOverflow" Background="LemonChiffon" FontSize="14" ></TextBlock>
+        </Border>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="1" Grid.Row="4" Grid.RowSpan="1   " Grid.ColumnSpan="2">
+
+            <TextBlock Name="Orders_status" Text="
+                       "  TextWrapping="WrapWithOverflow" Background="Aquamarine" FontSize="14" ></TextBlock>
+        </Border>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="0" Grid.Row="5" Grid.RowSpan="1   " Grid.ColumnSpan="3    ">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <TextBlock Name="Debug_output" Text="
+                       "  TextWrapping="WrapWithOverflow" TextAlignment="Left" Grid.ColumnSpan="3" Background="DarkSeaGreen" FontSize="14" ></TextBlock>
+                    <Separator />
+                </StackPanel>
+            </ScrollViewer>
+
+        </Border>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="0" Grid.Row="6" Grid.RowSpan="1   " Grid.ColumnSpan="3    ">
+
+            <TextBox Name="Course_SP" Text="180
+                       "  TextWrapping="WrapWithOverflow" TextAlignment="Left" Background="White" FontSize="14" KeyDown="Course_SP_KeyDown" ></TextBox>
+        </Border>
+        <Button BorderBrush="Black" BorderThickness="6" Background="Gray" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Click="Button_Click_1">Exit</Button>
+        <Border BorderThickness="6" BorderBrush="Black"  Grid.Column="3" Grid.ColumnSpan="1" Grid.RowSpan="5">
+
+            <Image Stretch="Fill" HorizontalAlignment="Left"  Name="frameHolder"  />
+        </Border>
+
+    </Grid>
+</Window>
